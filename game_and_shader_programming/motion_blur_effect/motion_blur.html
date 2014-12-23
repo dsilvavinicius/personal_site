@@ -1,0 +1,39 @@
+In this project the Post-processing Motion Blur effect explained in <a href='https://developer.nvidia.com/content/gpu-gems-3-chapter-27-motion-blur-post-processing-effect'>GPU Gems 3's chapter 27</a> is implemented and incorporated into Unity 3D's Boot Camp scene. Basically the shader uses the Depth Buffer to unproject pixels' uv coordinates back to world coordinates and reproject it using the model-view-projection matrix from the previous frame. The results are two uv coordinates, one from the current frame and another from the previous frame. The subtraction of these uv coordinates is equal to the pixel velocity, which is used to find pixel samples that contribute to the final pixel color. These contributions result in the blur effect. The effect can be softened or hardened depending on the number of samples used and the velocity's norm.
+
+<h2>Screenshots</h2>
+<br>
+<center>
+<a href='motionblurimg0'>
+  <img height='300' width='350' src='motionblurimg0'>
+</a>
+</center>
+
+<h2>Videos</h2>
+<br>
+<center>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/DVxii2F2bsE" frameborder="0" allowfullscreen></iframe>
+</center>
+
+<h1>Downloads</h1>
+
+<br>
+
+The source code contains just the shader and the associated JavaScript scripts. To use the effect, just attach all scripts to a camera and ensure that the shader property of the MotionBlur script is set with the correct shader.
+
+<br>
+<br>
+
+<table>
+  <tr>
+    <td>
+      <a href='motion-blur-bin'>
+        Binaries
+      </a>
+    <td>
+    <td>
+      <a href='motion-blur-src'>
+        Source
+      </a>
+    </td>
+  </tr>
+</table>

@@ -1,0 +1,45 @@
+This effect simulates an ink press and can be used as a transition between images. It is very simple and is used on Northway Games' <a href='http://www.incredipede.com/'>Incredipede</a>. They briefly explained the arts and effects on this <a href='http://www.gamasutra.com/view/news/193172/Video_The_art_and_tech_of_Incredipede.php'>GDC 2013 talk</a>. The shader just computes the brightness for each pixel and ensure that only the ones with brightness less than a defined threshold are rendered with their original colors. The others are clean to white or to another texture. To achieve a more smooth transition, an auxiliary image which consists of the blurred original image is used to calculate the pixel brightness instead of the original one. The blurring can be achieved with a Gaussian filter. The animation is done by changing the threshold. In this implementation the threshold is smoothly changed from 0.0 to 1.0 using the cos() function.
+
+<h2>Screenshots</h2>
+<br>
+<center>
+  <a href='ink-press-transition-img1'>
+    <img height='300' width='350' src='ink-press-transition-img1'>
+  </a>
+  <a href='ink-press-transition-img2'>
+    <img height='300' width='350' src='ink-press-transition-img2'>
+  </a>
+  <a href='ink-press-transition-img3'>
+    <img height='300' width='350' src='ink-press-transition-img3'>
+  </a>
+</center>
+
+<h2>Videos</h2>
+<br>
+<center>
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/H7GhFi6Flyo" frameborder="0" allowfullscreen></iframe>
+</center>
+
+<h2>Downloads</h2>
+
+<br>
+
+The source code contains just the shader and the associated JavaScript scripts. To use the effect, just attach all scripts to a camera and ensure that the shader property of the InkPress script is set with the correct shader.
+
+<br>
+<br>
+
+<table>
+  <tr>
+    <td>
+      <a href='ink-press-transition-bin'>
+        Binaries
+      </a>
+    <td>
+    <td>
+      <a href='ink-press-transition-src'>
+        Source
+      </a>
+    </td>
+  </tr>
+</table>

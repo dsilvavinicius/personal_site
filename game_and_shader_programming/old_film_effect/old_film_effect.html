@@ -1,0 +1,39 @@
+In this project the Old Film effect shader explained in this awesome <a href='http://devmaster.net/posts/2989/shader-effects-old-film'>Tutorial</a> is implemented and incorporated into Unity 3D's Boot Camp scene. To achieve the effect, first, the image is converted to grayscale and a sepia overlay is applied. Second, noise is generated using the 2D simplex noise algorithm implemented by Ian McEwan from Ashima Arts. Third, to create the scratch effect, a serie of sine bands are generated using the sine function. The bands are distorted by a turbulence factor, which is calculated using the noise function. Finally, the vignetting effect is used to simulate the light occlusion that the lens can generate on the borders of the image. Two radius from the center of the image are defined: outer and inner. If the pixel distance from the center is greater than outer, the black color is returned. If the distance lays between inner and outer, the color is darkened by an interpolated multiplier. If the distance is less than inner, then the original color is returned. For more details and formulas, see the Tutorial above.
+
+<h2>Screenshots</h2>
+<br>
+<center>
+  <a href='oldfilmimg0'>
+    <img height='300' width='350' src='oldfilmimg0'>
+  </a>
+</center>
+
+<h2>Videos</h2>
+<br>
+<center>
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/LH_NqRpnL0s" frameborder="0" allowfullscreen></iframe>
+</center>
+
+<h2>Downloads</h2>
+
+<br>
+
+The source code contains just the shader and the associated JavaScript scripts. To use the effect, just attach all scripts to a camera and ensure that the shader property of the OldFilm script is set with the correct shader.
+
+<br>
+<br>
+
+<table>
+  <tr>
+    <td>
+      <a href='old-film-bin'>
+        Binaries
+      </a>
+    <td>
+    <td>
+      <a href='old-film-src'>
+        Source
+      </a>
+    </td>
+  </tr>
+</table>

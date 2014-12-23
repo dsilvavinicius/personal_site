@@ -1,0 +1,24 @@
+<html>
+
+<head>
+  <title>CSG Tool</title>
+</head>
+
+<body>
+
+This work is a study on Constructive Solid Geometry (CSG), which is a method to construct meshes by use of operations on sets (union, intersection, difference). In this implementation, the CSG primitives are described by implicit functions evaluated into a regular grid. A good feature of this representation is the ability to compute the set operations by evaluating the implicit functions on the discretized points of the grid. With this representation we extract the isosurface of the solid generated using the marching cubes algorithm and store the result in a half-edge data structure for future drawing.
+<br><br>
+The marching cubes algorithm used in this work is a variation of the aproach by <a href='http://local.wasp.uwa.edu.au/~pbourke/geometry/polygonise/'>tetrahedrons written by Paul Bourke</a>, the half-edge used is the one provided in <a href='http://www.cgal.org'>CGAL</a> and the implementation of trees used to store the CSG operations is <a href='http://tree.phi-sci.com/'>the one written by Kasper Peeters</a>.
+<br><br>
+In this first version, the system constructs the solid by reading a file with the definitions of primitives and operations and because of this the examples are simple. In future releases the goal will be to construct the solid interactively.
+<br><br>
+<a href='http://code.google.com/p/csg-tool'>Google Code</a>
+<h3>Screenshots</h3>
+<img src='cross.png'>
+<br><br>
+<img src='robot.png'>
+<br><br>
+<img src='cube_cilinder_sphere.png'>
+
+</body>
+</html>

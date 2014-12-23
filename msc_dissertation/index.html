@@ -1,0 +1,32 @@
+<html>
+
+<head>
+  <title>M. Sc. Dissertation</title>
+</head>
+
+<body>
+
+This study presents the results of research in dynamic load balancing for Continuous Collision Detection (CCD) using Bounding Volumes Hierarchies (BVHs) on Graphics Processing Units (GPUs). Hierarchy traversal is a challenging problem for GPU computing, since the work load of traversal has a very dynamic nature. Current research resulted in methods to dynamically balance load as the traversal is evaluated. Unfortunatelly, current grid-based GPU computing interface is not well suited for this type of computing and load balancing code can generate excessive overhead. This work compares known load balancing methods, pointing pros and cons and presents a novel algorithm to address some of the most glaring problems.
+
+The algorithm uses the new concept of lazy work stealing, which tries to get the most out of the parallel capabilities of GPUs by greedy work stealing and lazy work evaluation. Also, the algorithm is designed to augment shared memory usage per block and diminish CPU-GPU context exchange penalties.
+
+<h2>Screenshots</h2>
+<br>
+<center>
+  <a href='msc_teaser.png'>
+    <img height='400' width='450' src='msc_teaser.png'>
+  </a>
+</center>
+
+<h2>Videos</h2>
+<br>
+<center>
+  <iframe width="420" height="315" src="http://www.youtube.com/embed/iCkz4JcSyNM" frameborder="0" allowfullscreen></iframe>
+</center>
+
+<h2>Source and Docs</h2>
+<br>
+The source code uses SVN version control and is hosted on <a href='https://code.google.com/p/continuous-collision-detection/'>Google Code</a>. The final dissertation text can be found <a href='dissertation.pdf'>here</a>.
+
+</body>
+</html>
